@@ -119,17 +119,11 @@
 
 本项目API均来源于[**WanAndroid**](https://www.wanandroid.com)，禁止商用。
 
-您可以在非商业的前提下免费转载，但同时您必须：
-
-* 保持文章原文，不作修改。
-* 明确署名，即至少注明 `作者：Sumiya` 字样以及文章的原始链接。
-* 微信公众号转载一律不授权 `原创` 标志。
 
 ### About me
 
-- #### 微信：`SUM_817`
-- #### Email：`su_mingyan@163.com`
-- #### 掘金：[https://juejin.cn/user/1654096907477549](https://juejin.cn/user/1654096907477549)
+- #### Email：`moonljt521@gmail.com`
+- #### 掘金：[掘金](https://juejin.cn/user/2682464100161181)
 
 如您有任何问题，也可以添加我的微信，进行学习上的交流。
 
