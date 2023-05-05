@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import com.sum.common.constant.KEY_TITLE
 import com.sum.common.constant.KEY_URL
 import com.sum.framework.base.BaseDataBindActivity
@@ -18,7 +19,7 @@ import com.tencent.smtt.sdk.WebViewClient
 /**
  * @author mingyan.su
  * @date   2023/3/31 17:04
- * @desc   文字详情
+ * @desc   webview 容器 文字详情
  */
 class ArticleDetailActivity : BaseDataBindActivity<ActivityArticleDetailBinding>() {
     private var mTitle = ""
@@ -44,7 +45,6 @@ class ArticleDetailActivity : BaseDataBindActivity<ActivityArticleDetailBinding>
     override fun initData() {
         val url = intent?.getStringExtra(KEY_URL)
         mTitle = intent?.getStringExtra(KEY_TITLE) ?: ""
-        showLoading()
         mBinding.webView.loadUrl(url)
     }
 
@@ -84,9 +84,8 @@ class ArticleDetailActivity : BaseDataBindActivity<ActivityArticleDetailBinding>
          */
         override fun onProgressChanged(webView: WebView?, process: Int) {
             super.onProgressChanged(webView, process)
-            if (process == 100) {
-                dismissLoading()
-            }
+            mBinding.webViewProgressBar.visibility = if (process < 100) View.VISIBLE else View.GONE
+            mBinding.webViewProgressBar.progress = process
         }
     }
 

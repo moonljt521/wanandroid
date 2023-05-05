@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     <com.sum.common.view.TitleBar
@@ -10,6 +11,17 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:rightIcon="@mipmap/ic_collect_normal_new"/>
+
+    <ProgressBar
+        android:id="@+id/web_view_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:progress="50"
+        tools:ignore="MissingConstraints" />
 
     <com.sum.framework.base.BaseWebView
             android:id="@+id/web_view"

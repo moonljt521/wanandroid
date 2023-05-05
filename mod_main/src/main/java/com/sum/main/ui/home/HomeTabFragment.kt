@@ -74,7 +74,7 @@ class HomeTabFragment : BaseMvvmFragment<FragmentHomeVideoBinding, HomeViewModel
             if (mPage == 1) {
                 mAdapter.setData(it)
                 mBinding?.refreshLayout?.finishRefresh()
-                mBinding?.refreshLayout?.setEnableRefresh(false)
+//                mBinding?.refreshLayout?.setEnableRefresh(false)
                 if (it.isNullOrEmpty()) {
                     mBinding?.viewEmptyData?.visible()
                 } else {
